@@ -49,6 +49,21 @@ For each remaining entry, tries to extract a release ID and enriches it with Dis
 Sends the enriched records to Azure Log Analytics.
 Deletes the temporary catalog folder.
 
+#########################################################################################################################
+
+--  the file WMI_DCU_Information.json 
+is what you can upload into Azure / Log Analytics.  then you need to get your workspace ID and sharedkey
 
 
+Get-AzOperationalInsightsWorkspaceSharedKey -ResourceGroupName "XYZ" -Name "ABCXYZ"   enter your resource group name
+and -Name from LAW.  On the OVERVIEW page
 
+
+Then in your file QueryDCUWMI_SendtoLAWPRODFinal.ps1 you need to update these fields
+
+$WorkspaceId  = ""
+$SharedKey    = ""
+
+#########################################################################################################################
+
+ 
