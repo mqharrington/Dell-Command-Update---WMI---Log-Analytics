@@ -1,6 +1,6 @@
 Dell Command Update writes its update history to the local WMI.
 
-    ######################################################################################################################
+############################################################################
 
 $Namespace = 'root\Dell\PlatformUpdateEvents'
 
@@ -21,7 +21,7 @@ catch {
     Write-Host "Failed to query WMI: $($_.Exception.Message)" -ForegroundColor Red
     Write-Host "Make sure Dell Command | Update is installed and you're running as Administrator." -ForegroundColor Yellow
 
-    ######################################################################################################################
+ ############################################################################
 
 
 --  file DCUResultsUdated.ps1
@@ -35,7 +35,7 @@ Writes every event as its own subkey under HKLM:\SOFTWARE\DELL\UpdateService\Upd
 Prints the results to the screen and deletes the temporary catalog folder.
 
 
-#########################################################################################################################
+ ############################################################################
 
 
 
@@ -49,7 +49,7 @@ For each remaining entry, tries to extract a release ID and enriches it with Dis
 Sends the enriched records to Azure Log Analytics.
 Deletes the temporary catalog folder.
 
-#########################################################################################################################
+ ############################################################################
 
 --  the file WMI_DCU_Information.json 
 is what you can upload into Azure / Log Analytics.  then you need to get your workspace ID and sharedkey
