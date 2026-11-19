@@ -26,8 +26,8 @@
 
 # Log Analytics workspace and shared key configuration
 
-$WorkspaceId  = "c233fa17-e78a-4d91-9f9b-c26b60f965a4"
-$SharedKey    = "YuO3J3N310Xe9tDmLn61QDznDqC8VBJsb2SiNbnsfmnyUxHlLUuDSRVOIcXb5qlfbXH1kv7cFBoulrCMT2e2PA=="
+$WorkspaceId  = ""
+$SharedKey    = ""
 $LogType      = "DellDCUActivityLog"
 
 #  example of how to get the workspace shared key from Azure   
