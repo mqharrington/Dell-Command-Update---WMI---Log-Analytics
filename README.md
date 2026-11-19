@@ -2,6 +2,9 @@ Dell Command Update writes its update history to the local WMI.
 
 ############################################################################
 
+clear-host
+
+
 $Namespace = 'root\Dell\PlatformUpdateEvents'
 
 try {
@@ -13,13 +16,17 @@ try {
     else {
         Write-Host "Found $($Events.Count) update event(s):" -ForegroundColor Green
         $Events | Format-List *
-        # Or use Format-Table if you prefer a compact view:
+        # Or:
         # $Events | Format-Table -AutoSize
     }
 }
 catch {
     Write-Host "Failed to query WMI: $($_.Exception.Message)" -ForegroundColor Red
     Write-Host "Make sure Dell Command | Update is installed and you're running as Administrator." -ForegroundColor Yellow
+}
+
+
+
 
  ############################################################################
 
