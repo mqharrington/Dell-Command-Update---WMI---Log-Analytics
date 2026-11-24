@@ -63,7 +63,7 @@ is what you can upload into Azure / Log Analytics.  then you need to get your wo
 
 
 Get-AzOperationalInsightsWorkspaceSharedKey -ResourceGroupName "XYZ" -Name "ABCXYZ"   enter your resource group name
-and -Name from LAW.  On the OVERVIEW page
+and -Name from LAW.  On the OVERVIEW page.  Or on the OVERVIEW page you can get your WORKSPACE ID.
 
 
 Then in your file QueryDCUWMI_SendtoLAWPRODFinal.ps1 you need to update these fields
@@ -73,4 +73,5 @@ $SharedKey    = ""
 
 ############################################################################
 
- 
+then in your json you need to change this line (probably near the bottom)
+ "/subscriptions/f24c1d74-cf32-4rg6-ad19-8866c25cb6d0/resourceGroups/DCU/providers/Microsoft.OperationalInsights/workspaces/WMIDCU" 
